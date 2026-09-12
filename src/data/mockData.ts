@@ -253,17 +253,27 @@ export const DEPENDENCY_GRAPH_NODES: DependencyNode[] = [
     risk: 'CRITICAL',
     depth: 1,
     description: 'Edge wildcard certificate serving external customer traffic. Vulnerable to Shor algorithm.',
-    dependencies: ['node-pki-root', 'node-api-gw']
+    dependencies: ['node-pki', 'node-api-gw']
   },
   {
-    id: 'node-pki-root',
-    label: 'Corporate Sub-CA',
+    id: 'node-pki',
+    label: 'Enterprise PKI',
     category: 'PKI',
-    algorithm: 'RSA-4096',
+    algorithm: 'RSA-4096 Root CA',
     risk: 'HIGH',
     depth: 2,
-    description: 'Internal certificate authority issuing operational certificates across the domain.',
-    dependencies: ['node-hsm-cluster']
+    description: 'Enterprise internal certificate authority issuing service-to-service trust certificates.',
+    dependencies: ['node-api-gw', 'node-hsm-cluster']
+  },
+  {
+    id: 'node-api-gw',
+    label: 'API Gateway',
+    category: 'Gateway',
+    algorithm: 'TLS 1.3 / ECDHE',
+    risk: 'HIGH',
+    depth: 2,
+    description: 'Terminates ingress TLS traffic and routes verified client requests to backend services.',
+    dependencies: ['node-payment-svc']
   },
   {
     id: 'node-hsm-cluster',
@@ -286,43 +296,23 @@ export const DEPENDENCY_GRAPH_NODES: DependencyNode[] = [
     dependencies: ['node-database']
   },
   {
-    id: 'node-api-gw',
-    label: 'API Gateway Ingress',
-    category: 'Gateway',
-    algorithm: 'TLS 1.3 / ECDHE',
-    risk: 'HIGH',
-    depth: 2,
-    description: 'Terminates TLS connections and routes requests to backend microservices.',
-    dependencies: ['node-payment-api']
-  },
-  {
-    id: 'node-payment-api',
-    label: 'Payment Routing API',
-    category: 'API',
-    algorithm: 'mTLS Client Auth',
+    id: 'node-payment-svc',
+    label: 'Payment Service',
+    category: 'Service',
+    algorithm: 'RSA-2048 / JWS Signing',
     risk: 'CRITICAL',
     depth: 3,
-    description: 'Processes credit card transactions, SWIFT messages, and interbank clearing requests.',
-    dependencies: ['node-payment-svc']
-  },
-  {
-    id: 'node-payment-svc',
-    label: 'Settlement Engine',
-    category: 'Service',
-    algorithm: 'RSA-2048 Signature',
-    risk: 'CRITICAL',
-    depth: 4,
-    description: 'Signs high-value transaction batches before dispatch to payment rails.',
-    dependencies: ['node-database', 'node-customer-app']
+    description: 'Processes credit card transactions, transaction signing, and settlement dispatch.',
+    dependencies: ['node-customer-app', 'node-database']
   },
   {
     id: 'node-customer-app',
-    label: 'Customer Mobile App',
+    label: 'Customer Application',
     category: 'Application',
-    algorithm: 'App Pinning (ECDSA)',
+    algorithm: 'App Pinning (ECDSA-P256)',
     risk: 'HIGH',
-    depth: 5,
-    description: '5.2M active client devices utilizing certificate pinning for anti-tamper.',
+    depth: 4,
+    description: 'Consumer client apps utilizing certificate pinning against the public gateway.',
     dependencies: []
   },
   {
@@ -331,8 +321,8 @@ export const DEPENDENCY_GRAPH_NODES: DependencyNode[] = [
     category: 'Database',
     algorithm: 'AES-256-GCM',
     risk: 'LOW',
-    depth: 5,
-    description: 'Encrypted relational datastore containing 12 years of customer transaction records.',
+    depth: 4,
+    description: 'Encrypted relational datastore containing 12 years of customer financial records.',
     dependencies: []
   }
 ];
@@ -448,7 +438,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     name: 'Government & Public Sector',
     tagline: 'Safeguarding citizen identity registries, sovereign data vaults, and judicial systems.',
     accent: '#00E5FF',
-    criticalChallenge: 'Sovereignty dictates zero reliance on unverified foreign cryptographic primitives and strict compliance with national transition mandates.',
+    criticalChallenge: 'Government environments require controlled cryptographic inventories, long-lived data protection and carefully managed migration paths.',
     cryptoFootprint: ['National ID Signing Keys', 'Government PKI (GPKI)', 'Inter-Agency Data Exchanges', 'Critical National Registries'],
     vulnerabilities: ['Fragmented cross-departmental trust models', 'Decades-old legacy software stacks', 'Lack of a central cryptographic inventory'],
     sequreitImpact: 'Establishes a sovereign, comprehensive CBOM across civil infrastructure to guide structured national transition plans.'
@@ -489,25 +479,32 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: 'Kishan Dwivedi',
     role: 'Founder & CEO',
-    focus: 'Vision, Cryptographic Strategy & Executive Leadership',
-    bio: 'Leads SeQureit with a mission to transition global enterprise infrastructure to quantum-safe crypto-agility. Drives product vision and strategic engagements across critical digital sectors.'
+    focus: 'Vision, Product Direction & Strategic Development',
+    bio: "Leads the company's vision, product direction and strategic development around cryptographic security and post-quantum readiness."
   },
   {
     name: 'Hrishabh Gupta',
     role: 'Technology & Product',
-    focus: 'Platform Architecture, Discovery Engine & UX Engineering',
-    bio: 'Architects SeQureit core cryptographic discovery engine and dependency intelligence layers. Bridges deep-tech cryptographic standards with enterprise-grade developer experiences.'
+    focus: 'Discovery Engine, Dependency Intelligence & Crypto-Agility',
+    bio: "Building SeQureit's cryptographic discovery, dependency intelligence and crypto-agility platform."
   },
   {
     name: 'Abhishek Pratap Singh',
     role: 'DevOps Engineer',
-    focus: 'Infrastructure Orchestration, Connectors & High-Throughput Scanners',
-    bio: 'Engineers distributed scanning pipelines, containerized discovery agents, and hardened deployment architectures for hybrid-cloud and air-gapped enterprise setups.'
+    focus: 'Infrastructure, Deployment & Platform Operations',
+    bio: "Engineering infrastructure, deployment and platform operations for SeQureit's cryptographic systems."
   },
   {
     name: 'Raunak Sharma',
     role: 'Researcher',
-    focus: 'Post-Quantum Algorithms, NIST Standards & Cryptanalysis',
-    bio: 'Researches post-quantum lattice-based cryptosystems (ML-KEM, ML-DSA) and stateful hash-based signatures, evaluating migration mechanics and performance overheads.'
+    focus: 'Post-Quantum Cryptography & Migration Strategies',
+    bio: 'Researching post-quantum cryptography, cryptographic standards and migration strategies.'
+  },
+  {
+    name: 'Nitin Gupta',
+    role: 'Advisor',
+    focus: 'Enterprise Technology Advisory',
+    bio: 'AGM, YASH Technologies',
+    isAdvisor: true
   }
 ];

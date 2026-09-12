@@ -63,9 +63,9 @@ export const FinalCinematicSection: React.FC<FinalCinematicSectionProps> = ({ on
         <div>
           <button
             onClick={onRequestDemo}
-            className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#0066FF] to-[#0080FF] hover:from-[#0052CC] hover:to-[#0066FF] text-white font-bold text-sm font-mono-code shadow-2xl shadow-[#0066FF]/40 hover:shadow-[#0066FF]/60 transition-all inline-flex items-center gap-2 group"
+            className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#0066FF] to-[#0080FF] hover:from-[#0052CC] hover:to-[#0066FF] text-white font-bold text-sm font-mono-code shadow-2xl shadow-[#0066FF]/40 hover:shadow-[#0066FF]/60 transition-all inline-flex items-center gap-2 group cursor-pointer"
           >
-            <span>Start the Conversation</span>
+            <span>Request a Demo</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

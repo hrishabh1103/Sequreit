@@ -7,138 +7,174 @@ export const PlatformLifecycle: React.FC = () => {
   const activeStage = PLATFORM_STAGES[selectedStage];
 
   return (
-    <section id="platform" className="relative py-24 md:py-32 bg-[#080C12] border-t border-white/[0.08]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
-            <Layers className="w-3.5 h-3.5" />
-            <span>FULL-LIFECYCLE CONTROL PLANE</span>
-          </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            FROM CRYPTOGRAPHIC BLIND SPOTS <br />
-            <span className="text-[#00E5FF]">TO CONTINUOUS CRYPTO-AGILITY.</span>
-          </h2>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            SeQureit is not simply a scanner or a point PQC product. We provide the intelligence and control layer across the entire lifecycle of enterprise cryptographic transformation.
-          </p>
+    <section id="lifecycle" className="relative bg-[#071522] text-[#EAF4FF] overflow-hidden transition-colors duration-500 border-t border-[#22D3EE]/20">
+      {/* Subtle Visual Continuity Ribbon */}
+      <div className="relative w-full py-4 border-b border-white/5 bg-[#050E17]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-[11px] font-mono-code text-[#94A9BC]">
+          <span className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#22D3EE] animate-pulse" />
+            <span>INTELLIGENCE BLUEPRINT // FULL TRANSFORMATION LIFECYCLE</span>
+          </span>
+          <span className="text-[#22D3EE]">NIST FIPS 203 / 204 / 205 Validated</span>
         </div>
+      </div>
 
-        {/* Interactive 8-Stage Lifecycle Navigator */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column: Stage Selector Tabs */}
-          <div className="lg:col-span-5 space-y-2">
-            {PLATFORM_STAGES.map((stage, idx) => {
-              const isSelected = selectedStage === idx;
-              return (
-                <button
-                  key={stage.step}
-                  onClick={() => setSelectedStage(idx)}
-                  className={`w-full text-left p-4 rounded-xl border transition-all duration-200 flex items-center justify-between ${
-                    isSelected
-                      ? 'bg-[#0D1117] border-[#00E5FF]/40 shadow-lg shadow-[#0066FF]/15 ring-1 ring-[#00E5FF]/20'
-                      : 'bg-[#05070A]/50 border-white/5 hover:border-white/15 hover:bg-[#0D1117]/50'
+      <div className="relative py-20 md:py-32 deep-blue-grid">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Section Header with Deep Technical Blueprint Typography */}
+          <div className="max-w-4xl mb-16 sm:mb-20">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3B82F6]/15 border border-[#3B82F6]/30 text-xs font-mono-code text-[#22D3EE] mb-6 shadow-xs">
+              <Layers className="w-3.5 h-3.5" />
+              <span>THE 8-STAGE TRANSFORMATION CYCLE</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#EAF4FF] tracking-tight leading-[1.05]">
+              FROM DISCOVERY <br />
+              <span className="text-[#22D3EE]">TO CRYPTO-AGILITY.</span>
+            </h2>
+
+            <p className="mt-6 text-base sm:text-xl text-[#94A9BC] font-normal leading-relaxed max-w-3xl font-sans">
+              SeQureit delivers continuous cryptographic lifecycle control. From unearthing hidden ciphers across enterprise repositories to validating post-quantum migration and establishing permanent agility.
+            </p>
+          </div>
+
+          {/* Interactive 8-Stage Engineering Blueprint Navigator */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            {/* Left Column: 8 Stages List with Deep Blue Engineering Borders */}
+            <div className="lg:col-span-5 space-y-2.5">
+              {PLATFORM_STAGES.map((stage, idx) => {
+                const isSelected = selectedStage === idx;
+                return (
+                  <button
+                    key={stage.step}
+                    onClick={() => setSelectedStage(idx)}
+                    className={`w-full text-left p-4 rounded-xl border transition-all duration-200 flex items-center justify-between group cursor-pointer ${
+                      isSelected
+                        ? 'bg-[#0B2135] border-[#22D3EE] shadow-lg shadow-[#0066FF]/20 ring-1 ring-[#22D3EE]/40'
+                        : 'bg-[#06111B]/80 border-white/10 hover:border-[#3B82F6]/40 hover:bg-[#0B2135]/50'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span
+                        className={`text-xs font-mono-code px-2 py-0.5 rounded font-bold ${
+                          isSelected
+                            ? 'bg-[#22D3EE] text-[#071522]'
+                            : 'bg-white/5 text-[#94A9BC] group-hover:text-[#EAF4FF]'
+                        }`}
+                      >
+                        {stage.step}
+                      </span>
+                      <span
+                        className={`text-sm sm:text-base font-bold font-mono-code tracking-tight ${
+                          isSelected ? 'text-white' : 'text-[#94A9BC] group-hover:text-white'
+                        }`}
+                      >
+                        {stage.name}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`text-[10px] font-mono-code px-2 py-0.5 rounded-full font-semibold border ${
+                          stage.currentStatus === 'Working Capability'
+                            ? 'bg-[#10B981]/15 text-[#10B981] border-[#10B981]/30'
+                            : stage.currentStatus === 'In Optimization'
+                            ? 'bg-[#F59E0B]/15 text-[#F59E0B] border-[#F59E0B]/30'
+                            : 'bg-[#8B5CF6]/15 text-[#8B5CF6] border-[#8B5CF6]/30'
+                        }`}
+                      >
+                        {stage.currentStatus === 'Working Capability'
+                          ? 'Available'
+                          : stage.currentStatus === 'In Optimization'
+                          ? 'In Optimization'
+                          : 'Roadmap'}
+                      </span>
+                      <ChevronRight
+                        className={`w-4 h-4 transition-transform ${
+                          isSelected ? 'text-[#22D3EE] translate-x-1' : 'text-slate-600 group-hover:text-[#94A9BC]'
+                        }`}
+                      />
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Right Column: Stage Detail Showcase on Deep Blue Surface */}
+            <div className="lg:col-span-7 p-6 sm:p-10 rounded-3xl bg-[#0B2135] border border-[#22D3EE]/25 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-80 h-80 bg-[#3B82F6]/10 blur-[100px] pointer-events-none" />
+
+              {/* Engineering Header */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 mb-6 gap-3">
+                <div className="flex items-center gap-2 font-mono-code text-xs">
+                  <span className="text-[#94A9BC]">STAGE SPECIFICATION:</span>
+                  <span className="text-[#22D3EE] font-bold text-sm">
+                    {activeStage.step} // {activeStage.name}
+                  </span>
+                </div>
+                <span
+                  className={`text-[11px] font-mono-code px-3 py-1 rounded-full font-semibold border inline-flex items-center gap-1.5 w-fit ${
+                    activeStage.currentStatus === 'Working Capability'
+                      ? 'bg-[#10B981]/15 text-[#10B981] border-[#10B981]/30'
+                      : activeStage.currentStatus === 'In Optimization'
+                      ? 'bg-[#F59E0B]/15 text-[#F59E0B] border-[#F59E0B]/30'
+                      : 'bg-[#8B5CF6]/15 text-[#8B5CF6] border-[#8B5CF6]/30'
                   }`}
                 >
-                  <div className="flex items-center gap-3">
-                    <span
-                      className={`text-xs font-mono-code px-2 py-0.5 rounded ${
-                        isSelected
-                          ? 'bg-[#00E5FF]/20 text-[#00E5FF] font-bold'
-                          : 'bg-white/5 text-slate-400 font-medium'
-                      }`}
-                    >
-                      STAGE {stage.step}
-                    </span>
-                    <span className={`text-sm font-bold tracking-tight ${isSelected ? 'text-white' : 'text-slate-300'}`}>
-                      {stage.name}
-                    </span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={`text-[10px] font-mono-code px-2 py-0.5 rounded-full ${
-                        stage.currentStatus === 'Working Capability'
-                          ? 'bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30'
-                          : stage.currentStatus === 'In Optimization'
-                          ? 'bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/30'
-                          : 'bg-[#8B5CF6]/15 text-[#8B5CF6] border border-[#8B5CF6]/30'
-                      }`}
-                    >
-                      {stage.currentStatus === 'Working Capability'
-                        ? 'Active'
-                        : stage.currentStatus === 'In Optimization'
-                        ? 'Optimizing'
-                        : 'Roadmap'}
-                    </span>
-                    <ChevronRight className={`w-4 h-4 transition-transform ${isSelected ? 'text-[#00E5FF] translate-x-1' : 'text-slate-600'}`} />
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Right Column: Stage Detail Showcase */}
-          <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#05070A] border border-white/10 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#0066FF]/10 blur-[100px] pointer-events-none" />
-
-            <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
-              <div className="flex items-center gap-2 font-mono-code text-xs">
-                <span className="text-slate-500">LIFECYCLE STAGE:</span>
-                <span className="text-[#00E5FF] font-bold text-sm">
-                  {activeStage.step} // {activeStage.name}
+                  <span className="w-1.5 h-1.5 rounded-full bg-current" />
+                  <span>{activeStage.currentStatus}</span>
                 </span>
               </div>
-              <span
-                className={`text-[11px] font-mono-code px-2.5 py-1 rounded-full ${
-                  activeStage.currentStatus === 'Working Capability'
-                    ? 'bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30'
-                    : activeStage.currentStatus === 'In Optimization'
-                    ? 'bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/30'
-                    : 'bg-[#8B5CF6]/15 text-[#8B5CF6] border border-[#8B5CF6]/30'
-                }`}
-              >
-                Status: {activeStage.currentStatus}
-              </span>
-            </div>
 
-            <h3 className="text-2xl font-bold text-white mb-3">{activeStage.headline}</h3>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
-              {activeStage.description}
-            </p>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4 font-mono-code">
+                {activeStage.headline}
+              </h3>
 
-            {/* Core Capabilities */}
-            <div className="space-y-3 mb-8">
-              <div className="text-xs font-mono-code uppercase tracking-wider text-slate-400">
-                Key Technical Engine Capabilities:
+              <p className="text-sm sm:text-base text-[#94A9BC] leading-relaxed mb-8 font-sans">
+                {activeStage.description}
+              </p>
+
+              {/* Core Capabilities */}
+              <div className="space-y-3 mb-8">
+                <div className="text-xs font-mono-code uppercase tracking-wider text-[#94A9BC] font-semibold">
+                  Key Technical Engine Capabilities:
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {activeStage.capabilities.map((cap, i) => (
+                    <div
+                      key={i}
+                      className="p-3.5 rounded-xl bg-[#071522] border border-white/5 flex items-start gap-2.5"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-[#22D3EE] shrink-0 mt-0.5" />
+                      <span className="text-xs font-mono-code text-slate-200 leading-snug">
+                        {cap}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {activeStage.capabilities.map((cap, i) => (
-                  <div key={i} className="p-3 rounded-lg bg-[#0D1117] border border-white/5 flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#00E5FF] shrink-0 mt-0.5" />
-                    <span className="text-xs text-slate-300 leading-snug">{cap}</span>
+
+              {/* Deliverable Callout */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#071522] border border-[#3B82F6]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <div>
+                  <div className="text-[10px] font-mono-code uppercase tracking-wider text-[#94A9BC]">
+                    Primary Enterprise Artifact:
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Deliverable Callout */}
-            <div className="p-4 rounded-xl bg-[#080C12] border border-[#00E5FF]/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-              <div>
-                <div className="text-[10px] font-mono-code uppercase tracking-wider text-slate-400">
-                  Primary Enterprise Artifact:
+                  <div className="text-sm font-bold text-white font-mono-code mt-0.5">
+                    {activeStage.deliverable}
+                  </div>
                 </div>
-                <div className="text-sm font-bold text-white font-mono-code mt-0.5">
-                  {activeStage.deliverable}
-                </div>
+                <span className="text-xs font-mono-code text-[#22D3EE] bg-[#3B82F6]/20 px-3 py-1.5 rounded-lg border border-[#3B82F6]/40 font-bold">
+                  Step {activeStage.step} of 08
+                </span>
               </div>
-              <span className="text-xs font-mono-code text-[#00E5FF] bg-[#0066FF]/10 px-3 py-1 rounded border border-[#0066FF]/30">
-                Step {activeStage.step} of 08
-              </span>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Continuity Exit Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-[#22D3EE]/30 to-transparent" />
     </section>
   );
 };

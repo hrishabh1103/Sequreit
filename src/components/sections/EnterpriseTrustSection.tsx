@@ -10,12 +10,12 @@ export const EnterpriseTrustSection: React.FC = () => {
     },
     {
       title: 'Evidence Isolation',
-      desc: 'Cryptographic findings and CBOM evidence are cryptographically signed and isolated within customer tenant boundaries with customer-managed encryption keys (CMEK).',
+      desc: 'Cryptographic findings and CBOM evidence are cryptographically isolated within customer tenant boundaries with customer-managed encryption keys (CMEK).',
       icon: Lock
     },
     {
-      title: 'Deployment Flexibility',
-      desc: 'Deploy as a fully managed SaaS tenant, a private dedicated VPC instance, or in an entirely self-contained, air-gapped configuration for classified or defence environments.',
+      title: 'Controlled Environments',
+      desc: 'Designed for controlled enterprise environments, dedicated customer VPC instances, and hybrid enterprise infrastructure with zero unwanted outbound connections.',
       icon: Server
     },
     {
@@ -24,23 +24,23 @@ export const EnterpriseTrustSection: React.FC = () => {
       icon: Key
     },
     {
-      title: 'Full Auditability',
-      desc: 'Every discovery scan, baseline adjustment, and remediation recommendation generates an immutable, tamper-evident audit trail for enterprise governance.',
+      title: 'Auditability',
+      desc: 'Every discovery scan, baseline adjustment, and remediation recommendation generates a verifiable, tamper-evident audit trail for enterprise governance.',
       icon: FileText
     },
     {
       title: 'Configurable Telemetry',
-      desc: 'Full administrative control over scan egress, prober rate limits, and network routing to ensure zero interference with critical line-of-business operations.',
+      desc: 'Full administrative control over scan egress, rate limits, and network routing to guarantee zero interference with critical line-of-business operations.',
       icon: Shield
     }
   ];
 
   return (
-    <section className="relative py-24 md:py-32 bg-[#05070A] border-t border-white/[0.08]">
+    <section className="relative py-28 md:py-36 bg-[#05070A] border-t border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
             <Shield className="w-3.5 h-3.5" />
             <span>ENTERPRISE GOVERNANCE & ARCHITECTURE</span>
           </div>
@@ -49,7 +49,7 @@ export const EnterpriseTrustSection: React.FC = () => {
             <span className="text-[#00E5FF]">AND SOVEREIGN TRUST.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            SeQureit is engineered for deployment in high-security environments. Our architecture respects data sovereignty, enforces strict data minimization, and supports completely air-gapped operations.
+            SeQureit is engineered for deployment in high-security environments. Our architecture respects data sovereignty, enforces strict data minimization, and is designed for controlled enterprise environments.
           </p>
         </div>
 
@@ -86,11 +86,11 @@ export const EnterpriseTrustSection: React.FC = () => {
               SUPPORTED DEPLOYMENT MODELS:
             </div>
             <div className="text-sm font-semibold text-white font-mono-code">
-              Self-Hosted Air-Gapped Appliance • Private Cloud VPC (AWS / Azure / GCP) • Hybrid Enterprise Mesh
+              Designed for Controlled Enterprise Environments • Dedicated Cloud VPC (AWS / Azure / GCP) • Hybrid Enterprise Infrastructure
             </div>
           </div>
           <div className="text-xs font-mono-code text-slate-400 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-            No external telemetry required for air-gapped clusters
+            No external telemetry required for controlled environments
           </div>
         </div>
       </div>
