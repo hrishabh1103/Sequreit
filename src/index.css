@@ -148,6 +148,19 @@
   animation: pulse-subtle 4s ease-in-out infinite;
 }
 
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 0.8s infinite;
+}
+
+.text-cyber-glow {
+  text-shadow: 0 0 16px rgba(0, 229, 255, 0.45);
+}
+
 /* Light theme blueprint utilities */
 .blueprint-grid {
   background-size: 40px 40px;

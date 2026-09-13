@@ -1,5 +1,7 @@
 import React from 'react';
 import { Layers, ArrowDown, Shield, RefreshCw } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const WhatIsCyberKorpSection: React.FC = () => {
   const hiddenSubstrates = [
@@ -43,26 +45,37 @@ export const WhatIsCyberKorpSection: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Pill & Lead Header */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#0EA5A5]/30 text-xs font-mono-code text-[#0066FF] mb-6 shadow-xs">
-              <Layers className="w-3.5 h-3.5 text-[#0EA5A5]" />
-              <span className="font-semibold">THE CRYPTOGRAPHIC CONTROL PLANE</span>
-            </div>
+            <ScrollReveal delay={50} direction="down">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#0EA5A5]/30 text-xs font-mono-code text-[#0066FF] mb-6 shadow-xs">
+                <Layers className="w-3.5 h-3.5 text-[#0EA5A5]" />
+                <span className="font-semibold">THE CRYPTOGRAPHIC CONTROL PLANE</span>
+              </div>
+            </ScrollReveal>
 
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#07111F] tracking-tight leading-[1.1] mb-6 font-mono-code">
               YOUR CRYPTOGRAPHY IS AN <br />
-              <span className="text-[#0066FF]">INVISIBLE DEPENDENCY LAYER.</span>
+              <TextDecrypt
+                text="INVISIBLE DEPENDENCY LAYER."
+                as="span"
+                className="text-[#0066FF]"
+                speed={32}
+                cursorColor="#0066FF"
+              />
             </h2>
 
-            <p className="text-base sm:text-xl text-[#475569] font-normal max-w-3xl mx-auto leading-relaxed">
-              Cryptography is embedded across applications, APIs, certificates, PKI, keys, KMS, HSMs, networks and devices.
-              <span className="block mt-2 text-[#64748B] text-sm sm:text-base">
-                CyberKorp maps that hidden layer, connects the dependencies, identifies risk and helps organizations transform it for a quantum-safe future.
-              </span>
-            </p>
+            <ScrollReveal delay={200} direction="up">
+              <p className="text-base sm:text-xl text-[#475569] font-normal max-w-3xl mx-auto leading-relaxed">
+                Cryptography is embedded across applications, APIs, certificates, PKI, keys, KMS, HSMs, networks and devices.
+                <span className="block mt-2 text-[#64748B] text-sm sm:text-base">
+                  CyberKorp maps that hidden layer, connects the dependencies, identifies risk and helps organizations transform it for a quantum-safe future.
+                </span>
+              </p>
+            </ScrollReveal>
           </div>
 
           {/* Clean Technical Blueprint Visualization */}
-          <div className="rounded-3xl bg-white/95 border border-[#0EA5A5]/25 p-6 sm:p-10 lg:p-14 shadow-lg shadow-teal-900/5 relative overflow-hidden">
+          <ScrollReveal delay={300} direction="up" distance={30}>
+            <div className="rounded-3xl bg-white/95 border border-[#0EA5A5]/25 p-6 sm:p-10 lg:p-14 shadow-lg shadow-teal-900/5 relative overflow-hidden">
             {/* Level 1: The Heterogeneous Embedded Infrastructure */}
             <div className="relative z-10 mb-8">
               <div className="flex items-center justify-between mb-4">
@@ -173,6 +186,7 @@ export const WhatIsCyberKorpSection: React.FC = () => {
               </p>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
 

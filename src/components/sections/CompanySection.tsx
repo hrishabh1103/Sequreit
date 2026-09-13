@@ -1,6 +1,8 @@
 import React from 'react';
 import { TEAM_MEMBERS } from '../../data/mockData';
 import { Globe2, MapPin, Award } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const CompanySection: React.FC = () => {
   const globalRegions = [
@@ -27,24 +29,34 @@ export const CompanySection: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header with Large Human & Restrained Typography */}
           <div className="max-w-4xl mb-14 sm:mb-18">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#0066FF]/25 text-xs font-mono-code text-[#0066FF] mb-5 shadow-xs">
-              <Globe2 className="w-3.5 h-3.5" />
-              <span className="font-semibold">THE FOUNDING TEAM</span>
-            </div>
+            <ScrollReveal delay={50} direction="down">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#0066FF]/25 text-xs font-mono-code text-[#0066FF] mb-5 shadow-xs">
+                <Globe2 className="w-3.5 h-3.5" />
+                <span className="font-semibold">THE FOUNDING TEAM</span>
+              </div>
+            </ScrollReveal>
 
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#07111F] tracking-tight leading-[1.05] font-mono-code">
               BUILT IN INDIA. <br />
-              <span className="text-[#0066FF]">DESIGNED FOR THE WORLD.</span>
+              <TextDecrypt
+                text="DESIGNED FOR THE WORLD."
+                as="span"
+                className="text-[#0066FF]"
+                speed={32}
+                cursorColor="#0066FF"
+              />
             </h2>
 
-            <div className="mt-6 p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-xs max-w-2xl">
-              <p className="text-xl sm:text-2xl font-serif italic text-[#07111F] leading-snug">
-                &ldquo;College friends. Industry experience. One ambition.&rdquo;
-              </p>
-              <p className="mt-3 text-xs sm:text-sm text-[#475569] font-mono-code leading-relaxed">
-                Building the foundational cryptographic control plane that helps global enterprises migrate safely into the post-quantum era.
-              </p>
-            </div>
+            <ScrollReveal delay={120} direction="up">
+              <div className="mt-6 p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-xs max-w-2xl">
+                <p className="text-xl sm:text-2xl font-serif italic text-[#07111F] leading-snug">
+                  &ldquo;College friends. Industry experience. One ambition.&rdquo;
+                </p>
+                <p className="mt-3 text-xs sm:text-sm text-[#475569] font-mono-code leading-relaxed">
+                  Building the foundational cryptographic control plane that helps global enterprises migrate safely into the post-quantum era.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Global Alignment Strip */}

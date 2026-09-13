@@ -1,31 +1,35 @@
 import React from 'react';
 import { ArrowRight, ArrowUpRight, Cpu } from 'lucide-react';
 import { CryptoNervousHero } from '../visualizers/CryptoNervousHero';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 interface HeroSectionProps {
   onRequestDemo: () => void;
   onExplorePlatform: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onRequestDemo, onExplorePlatform }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({
+  onRequestDemo,
+  onExplorePlatform
+}) => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <section className="relative min-h-[92vh] pt-32 pb-20 flex flex-col justify-center overflow-hidden bg-[#05070A]">
       {/* Background ambient lighting */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#0066FF]/15 via-[#00E5FF]/5 to-transparent blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0066FF]/15 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[250px] bg-[#00E5FF]/10 blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Top category indicator */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#080C12] border border-white/10 backdrop-blur-md shadow-inner text-xs font-mono-code text-slate-300">
-            <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse" />
-            <span>CRYPTOGRAPHIC INTELLIGENCE & CONTROL PLANE</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        {/* Top Eyebrow Badge */}
+        <ScrollReveal delay={100} direction="down">
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono-code text-[#00E5FF] shadow-inner">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] animate-pulse" />
+              <Cpu className="w-3 h-3" />
+              <span>PQC Migration Entry ➔ Crypto-Agility Destination</span>
+            </div>
           </div>
-
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-[11px] font-mono-code text-[#00E5FF]">
-            <Cpu className="w-3 h-3" />
-            <span>PQC Migration Entry ➔ Crypto-Agility Destination</span>
-          </div>
-        </div>
+        </ScrollReveal>
 
         {/* Hero Headlines */}
         <div className="text-center max-w-4xl mx-auto space-y-4">
@@ -34,43 +38,56 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRequestDemo, onExplo
             <span className="text-slate-400">IS EVERYWHERE.</span>
           </h1>
 
-          <p className="text-2xl sm:text-4xl font-semibold tracking-tight text-[#00E5FF] font-mono-code pt-1">
-            CAN YOU SEE IT ALL?
-          </p>
+          <div className="pt-1">
+            <TextDecrypt
+              text="CAN YOU SEE IT ALL?"
+              as="h2"
+              className="text-2xl sm:text-4xl font-semibold tracking-tight text-[#00E5FF] font-mono-code"
+              speed={45}
+              delay={350}
+              cursorColor="#00E5FF"
+            />
+          </div>
 
-          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed pt-3">
-            CyberKorp gives enterprises the intelligence to discover, understand, prioritize, and transform cryptography across their digital infrastructure.
-          </p>
+          <ScrollReveal delay={300} direction="up">
+            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed pt-3">
+              CyberKorp gives enterprises the intelligence to discover, understand, prioritize, and transform cryptography across their digital infrastructure.
+            </p>
 
-          <p className="text-xs sm:text-sm text-slate-400 font-mono-code flex items-center justify-center gap-2 pt-1">
-            <span className="text-[#10B981]">●</span>
-            <span>&ldquo;You cannot migrate what you cannot see.&rdquo;</span>
-          </p>
+            <p className="text-xs sm:text-sm text-slate-400 font-mono-code flex items-center justify-center gap-2 pt-2">
+              <span className="text-[#10B981]">●</span>
+              <span>&ldquo;You cannot migrate what you cannot see.&rdquo;</span>
+            </p>
+          </ScrollReveal>
 
           {/* Action CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-            <button
-              onClick={onExplorePlatform}
-              className="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-gradient-to-r from-[#0066FF] to-[#0080FF] hover:from-[#0052CC] hover:to-[#0066FF] text-white font-semibold text-sm shadow-xl shadow-[#0066FF]/30 hover:shadow-[#0066FF]/50 transition-all duration-200 flex items-center justify-center gap-2 group"
-            >
-              <span>Explore the Platform</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+          <ScrollReveal delay={450} direction="up">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+              <button
+                onClick={onExplorePlatform}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-gradient-to-r from-[#0066FF] to-[#0080FF] hover:from-[#0052CC] hover:to-[#0066FF] text-white font-semibold text-sm shadow-xl shadow-[#0066FF]/30 hover:shadow-[#0066FF]/50 transition-all duration-200 flex items-center justify-center gap-2 group cursor-pointer"
+              >
+                <span>Explore the Platform</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
 
-            <button
-              onClick={onRequestDemo}
-              className="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-[#080C12] hover:bg-[#161B22] text-slate-200 hover:text-white border border-white/15 hover:border-[#00E5FF]/50 text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"
-            >
-              <span>Talk to Our Team</span>
-              <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-white" />
-            </button>
-          </div>
+              <button
+                onClick={onRequestDemo}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-[#080C12] hover:bg-[#161B22] text-slate-200 hover:text-white border border-white/15 hover:border-[#00E5FF]/50 text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg cursor-pointer"
+              >
+                <span>Talk to Our Team</span>
+                <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-white" />
+              </button>
+            </div>
+          </ScrollReveal>
         </div>
 
         {/* Hero Interactive Canvas Section */}
-        <div className="mt-14 relative">
-          <CryptoNervousHero />
-        </div>
+        <ScrollReveal delay={550} direction="up" distance={35}>
+          <div className="mt-14 relative">
+            <CryptoNervousHero />
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { BookOpen, ArrowUpRight, Clock, X, CheckCircle2 } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 interface Article {
   title: string;
@@ -100,17 +102,29 @@ export const ResourcesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
-            <BookOpen className="w-3.5 h-3.5" />
-            <span>KNOWLEDGE & RESEARCH PERSPECTIVES</span>
-          </div>
+          <ScrollReveal delay={50} direction="down">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
+              <BookOpen className="w-3.5 h-3.5" />
+              <span>KNOWLEDGE & RESEARCH PERSPECTIVES</span>
+            </div>
+          </ScrollReveal>
+
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
             ENGINEERING INSIGHTS <br />
-            <span className="text-[#00E5FF]">FOR CRYPTOGRAPHIC LEADERS.</span>
+            <TextDecrypt
+              text="FOR CRYPTOGRAPHIC LEADERS."
+              as="span"
+              className="text-[#00E5FF]"
+              speed={32}
+              cursorColor="#00E5FF"
+            />
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Practical technical analysis, architecture frameworks, and migration methodology authored by the CyberKorp research and engineering team. Click any paper to read the architectural overview.
-          </p>
+
+          <ScrollReveal delay={150} direction="up">
+            <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
+              Practical technical analysis, architecture frameworks, and migration methodology authored by the CyberKorp research and engineering team. Click any paper to read the architectural overview.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Category Filters */}

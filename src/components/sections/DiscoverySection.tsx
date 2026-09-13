@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, FileCode, RefreshCw } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const DiscoverySection: React.FC = () => {
   const [activeScanTarget, setActiveScanTarget] = useState(0);
@@ -31,17 +33,29 @@ export const DiscoverySection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
-            <Search className="w-3.5 h-3.5" />
-            <span>DEEP RECONNAISSANCE ENGINE</span>
-          </div>
+          <ScrollReveal delay={50} direction="down">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
+              <Search className="w-3.5 h-3.5" />
+              <span>DEEP RECONNAISSANCE ENGINE</span>
+            </div>
+          </ScrollReveal>
+
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
             DISCOVER THE CRYPTOGRAPHY <br />
-            <span className="text-[#00E5FF]">YOU DIDN&apos;T KNOW YOU HAD.</span>
+            <TextDecrypt
+              text="YOU DIDN'T KNOW YOU HAD."
+              as="span"
+              className="text-[#00E5FF]"
+              speed={32}
+              cursorColor="#00E5FF"
+            />
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            CyberKorp continuously traverses source code, repositories, configuration manifests, TLS endpoints, and key management infrastructure to extract cryptographic calls and build evidence-backed findings.
-          </p>
+
+          <ScrollReveal delay={150} direction="up">
+            <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
+              CyberKorp continuously traverses source code, repositories, configuration manifests, TLS endpoints, and key management infrastructure to extract cryptographic calls and build evidence-backed findings.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Discovery Multi-Surface Hub */}

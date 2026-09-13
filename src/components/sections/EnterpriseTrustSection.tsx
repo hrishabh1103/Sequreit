@@ -1,5 +1,7 @@
 import React from 'react';
 import { Shield, Lock, Key, Server, EyeOff, FileText, CheckCircle2 } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const EnterpriseTrustSection: React.FC = () => {
   const trustPillars = [
@@ -40,17 +42,29 @@ export const EnterpriseTrustSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
-            <Shield className="w-3.5 h-3.5" />
-            <span>ENTERPRISE GOVERNANCE & ARCHITECTURE</span>
-          </div>
+          <ScrollReveal delay={50} direction="down">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
+              <Shield className="w-3.5 h-3.5" />
+              <span>ENTERPRISE GOVERNANCE & ARCHITECTURE</span>
+            </div>
+          </ScrollReveal>
+
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
             BUILT FOR ENTERPRISE SECURITY <br />
-            <span className="text-[#00E5FF]">AND SOVEREIGN TRUST.</span>
+            <TextDecrypt
+              text="AND SOVEREIGN TRUST."
+              as="span"
+              className="text-[#00E5FF]"
+              speed={32}
+              cursorColor="#00E5FF"
+            />
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            CyberKorp is engineered for deployment in high-security environments. Our architecture respects data sovereignty, enforces strict data minimization, and is designed for controlled enterprise environments.
-          </p>
+
+          <ScrollReveal delay={150} direction="up">
+            <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
+              CyberKorp is engineered for deployment in high-security environments. Our architecture respects data sovereignty, enforces strict data minimization, and is designed for controlled enterprise environments.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* 6 Principles Grid */}

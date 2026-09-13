@@ -1,5 +1,7 @@
 import React from 'react';
 import { Clock, ShieldAlert, CheckCircle2 } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const WhyNowSection: React.FC = () => {
   const transitionTimeline = [
@@ -43,20 +45,32 @@ export const WhyNowSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
-            <Clock className="w-3.5 h-3.5" />
-            <span>THE STRATEGIC REALITY</span>
-          </div>
+          <ScrollReveal delay={50} direction="down">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
+              <Clock className="w-3.5 h-3.5" />
+              <span>THE STRATEGIC REALITY</span>
+            </div>
+          </ScrollReveal>
+
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
             THE CRYPTOGRAPHIC TRANSITION <br />
-            <span className="text-[#00E5FF]">HAS ALREADY BEGUN.</span>
+            <TextDecrypt
+              text="HAS ALREADY BEGUN."
+              as="span"
+              className="text-[#00E5FF]"
+              speed={32}
+              cursorColor="#00E5FF"
+            />
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Post-quantum cryptography is moving from academic research into enterprise implementation. Organizations must identify vulnerable cryptography, understand dependencies, prioritize migration, and safeguard long-lived sensitive data.
-          </p>
-          <div className="mt-4 p-4 rounded-xl bg-[#080C12] border border-[#00E5FF]/20 text-xs sm:text-sm font-mono-code text-[#00E5FF]">
-            &ldquo;Quantum readiness is not a single migration project. It is an infrastructure transformation problem.&rdquo;
-          </div>
+
+          <ScrollReveal delay={150} direction="up">
+            <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
+              Post-quantum cryptography is moving from academic research into enterprise implementation. Organizations must identify vulnerable cryptography, understand dependencies, prioritize migration, and safeguard long-lived sensitive data.
+            </p>
+            <div className="mt-4 p-4 rounded-xl bg-[#080C12] border border-[#00E5FF]/20 text-xs sm:text-sm font-mono-code text-[#00E5FF]">
+              &ldquo;Quantum readiness is not a single migration project. It is an infrastructure transformation problem.&rdquo;
+            </div>
+          </ScrollReveal>
         </div>
 
         {/* HNDL & Timeline Grid */}

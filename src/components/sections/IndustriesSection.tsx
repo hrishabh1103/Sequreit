@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import { INDUSTRIES_DATA } from '../../data/mockData';
 import type { IndustryData } from '../../types';
 import { Building2, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const IndustriesSection: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<IndustryData>(INDUSTRIES_DATA[0]);
 
   return (
-    <section id="industries" className="relative bg-[#EAF8F5] text-[#07111F] overflow-hidden transition-colors duration-500 border-t border-[#0EA5A5]/20">
-      {/* Continuity Entry Divider */}
-      <div className="relative w-full bg-gradient-to-b from-[#080C12] to-[#EAF8F5] py-4">
+    <section id="industries" className="relative bg-[#EAF8F5] text-[#07111F] overflow-hidden transition-colors duration-500 border-t border-[#0EA5A5]/25">
+      {/* Visual Continuity Transition Strip (Deep Navy -> Pale Mint) */}
+      <div className="relative w-full overflow-hidden bg-gradient-to-b from-[#071522] to-[#EAF8F5] pt-6 pb-8 px-4">
         <div className="max-w-5xl mx-auto flex items-center justify-center">
           <div className="tech-divider opacity-30" />
         </div>
@@ -19,23 +21,34 @@ export const IndustriesSection: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="max-w-4xl mb-14 sm:mb-18">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#0EA5A5]/30 text-xs font-mono-code text-[#0066FF] mb-5 shadow-xs">
-              <Building2 className="w-3.5 h-3.5 text-[#0EA5A5]" />
-              <span className="font-semibold">CRITICAL SECTOR PROFILES</span>
-            </div>
+            <ScrollReveal delay={50} direction="down">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#0EA5A5]/30 text-xs font-mono-code text-[#0066FF] mb-5 shadow-xs">
+                <Building2 className="w-3.5 h-3.5 text-[#0EA5A5]" />
+                <span className="font-semibold">CRITICAL SECTOR PROFILES</span>
+              </div>
+            </ScrollReveal>
 
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#07111F] tracking-tight leading-[1.05] font-mono-code">
               CRYPTOGRAPHY IS <br />
-              <span className="text-[#0066FF]">INFRASTRUCTURE.</span>
+              <TextDecrypt
+                text="INFRASTRUCTURE."
+                as="span"
+                className="text-[#0066FF]"
+                speed={35}
+                cursorColor="#0066FF"
+              />
             </h2>
 
-            <p className="mt-5 text-base sm:text-xl text-[#475569] font-normal leading-relaxed max-w-3xl">
-              Digital backbone infrastructure cannot afford sudden outages, broken certificate trust chains, or retroactive data decryption. CyberKorp aligns cryptographic transformation with enterprise operational realities.
-            </p>
+            <ScrollReveal delay={150} direction="up">
+              <p className="mt-5 text-base sm:text-xl text-[#475569] font-normal leading-relaxed max-w-3xl">
+                Digital backbone infrastructure cannot afford sudden outages, broken certificate trust chains, or retroactive data decryption. CyberKorp aligns cryptographic transformation with enterprise operational realities.
+              </p>
+            </ScrollReveal>
           </div>
 
           {/* Minimal and Elegant Sector Navigator */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <ScrollReveal delay={250} direction="up" distance={30}>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Column: Sector Selector */}
             <div className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5">
               {INDUSTRIES_DATA.map((ind) => {
@@ -152,6 +165,7 @@ export const IndustriesSection: React.FC = () => {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
 

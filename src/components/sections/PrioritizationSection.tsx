@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { PRIORITY_QUEUE_ITEMS } from '../../data/mockData';
 import type { PriorityItem } from '../../types';
 import { ListOrdered } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const PrioritizationSection: React.FC = () => {
   const [selectedQueueItem, setSelectedQueueItem] = useState<PriorityItem>(PRIORITY_QUEUE_ITEMS[0]);
@@ -11,17 +13,29 @@ export const PrioritizationSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
-            <ListOrdered className="w-3.5 h-3.5" />
-            <span>ACTIONABLE MIGRATION ROADMAP</span>
-          </div>
+          <ScrollReveal delay={50} direction="down">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
+              <ListOrdered className="w-3.5 h-3.5" />
+              <span>ACTIONABLE MIGRATION ROADMAP</span>
+            </div>
+          </ScrollReveal>
+
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
             NOT EVERYTHING <br />
-            <span className="text-[#00E5FF]">NEEDS TO MOVE AT ONCE.</span>
+            <TextDecrypt
+              text="NEEDS TO MOVE AT ONCE."
+              as="span"
+              className="text-[#00E5FF]"
+              speed={32}
+              cursorColor="#00E5FF"
+            />
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            A blanket migration approach causes organizational paralysis. CyberKorp translates discovery findings into an actionable, prioritized execution queue—clarifying WHAT to migrate, WHEN to migrate, and WHY it matters.
-          </p>
+
+          <ScrollReveal delay={150} direction="up">
+            <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
+              A blanket migration approach causes organizational paralysis. CyberKorp translates discovery findings into an actionable, prioritized execution queue—clarifying WHAT to migrate, WHEN to migrate, and WHY it matters.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Priority Queue Cards & Active Inspector */}

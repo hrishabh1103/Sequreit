@@ -1,5 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 interface FinalCinematicSectionProps {
   onRequestDemo: () => void;
@@ -17,20 +19,30 @@ export const FinalCinematicSection: React.FC<FinalCinematicSectionProps> = ({ on
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Ambient Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#080C12] border border-white/15 text-xs font-mono-code text-slate-300 mb-8 shadow-inner">
-          <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-ping" />
-          <span>THE QUANTUM ERA IS COMING. YOUR CRYPTOGRAPHY SHOULD BE READY.</span>
-        </div>
+        <ScrollReveal delay={50} direction="down">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#080C12] border border-white/15 text-xs font-mono-code text-slate-300 mb-8 shadow-inner">
+            <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-ping" />
+            <span>THE QUANTUM ERA IS COMING. YOUR CRYPTOGRAPHY SHOULD BE READY.</span>
+          </div>
+        </ScrollReveal>
 
         {/* Grand Headline */}
         <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.05] mb-6">
           UNDERSTAND TODAY. <br />
-          <span className="text-gradient-cyan">SECURE TOMORROW.</span>
+          <TextDecrypt
+            text="SECURE TOMORROW."
+            as="span"
+            className="text-gradient-cyan"
+            speed={35}
+            cursorColor="#00E5FF"
+          />
         </h2>
 
-        <p className="text-lg sm:text-2xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed mb-10">
-          Build the cryptographic resilience your infrastructure will need next.
-        </p>
+        <ScrollReveal delay={120} direction="up">
+          <p className="text-lg sm:text-2xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed mb-10">
+            Build the cryptographic resilience your infrastructure will need next.
+          </p>
+        </ScrollReveal>
 
         {/* Central Brand Emblem */}
         <div className="flex flex-col items-center justify-center mb-10">

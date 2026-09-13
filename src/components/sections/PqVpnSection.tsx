@@ -1,6 +1,8 @@
 import React from 'react';
 import { PqVpnSimulator } from '../visualizers/PqVpnSimulator';
 import { ArrowRight, Lock, Key, Server, Laptop } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const PqVpnSection: React.FC<{ onRequestDemo: () => void }> = ({ onRequestDemo }) => {
   return (
@@ -8,23 +10,38 @@ export const PqVpnSection: React.FC<{ onRequestDemo: () => void }> = ({ onReques
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#10B981]/15 border border-[#10B981]/35 text-xs font-mono-code text-[#10B981] mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
-            <span>ONE OF CYBERKORP&apos;S CURRENT REMEDIATION CAPABILITIES</span>
-          </div>
+          <ScrollReveal delay={50} direction="down">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#10B981]/15 border border-[#10B981]/35 text-xs font-mono-code text-[#10B981] mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
+              <span>ONE OF CYBERKORP&apos;S CURRENT REMEDIATION CAPABILITIES</span>
+            </div>
+          </ScrollReveal>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
             A WORKING PIECE <br />
-            <span className="text-[#10B981]">OF THE FUTURE.</span>
+            <TextDecrypt
+              text="OF THE FUTURE."
+              as="span"
+              className="text-[#10B981]"
+              speed={32}
+              cursorColor="#10B981"
+            />
           </h2>
 
-          <p className="mt-4 text-xl sm:text-2xl text-slate-200 font-light font-mono-code">
-            Post-quantum secure connectivity, available today.
-          </p>
+          <TextDecrypt
+            text="Post-quantum secure connectivity, available today."
+            as="p"
+            className="mt-4 text-xl sm:text-2xl text-slate-200 font-light font-mono-code block"
+            speed={35}
+            delay={250}
+            cursorColor="#10B981"
+          />
 
-          <p className="mt-4 text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl">
-            While long-term crypto-agility governs your entire cryptographic estate, our PQ-VPN delivers immediate protection for critical transit routes right now. It protects sensitive inter-site, data replication, and B2B streams against ongoing Harvest Now, Decrypt Later (HNDL) adversaries.
-          </p>
+          <ScrollReveal delay={300} direction="up">
+            <p className="mt-4 text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl">
+              While long-term crypto-agility governs your entire cryptographic estate, our PQ-VPN delivers immediate protection for critical transit routes right now. It protects sensitive inter-site, data replication, and B2B streams against ongoing Harvest Now, Decrypt Later (HNDL) adversaries.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* The 4-Stage Transmission Architecture Visual Ribbon */}

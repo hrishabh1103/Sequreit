@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { CheckCircle2, ShieldCheck } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const ValidationSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
@@ -56,17 +58,29 @@ export const ValidationSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
-            <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>POST-MIGRATION VERIFICATION SUITE</span>
-          </div>
+          <ScrollReveal delay={50} direction="down">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>POST-MIGRATION VERIFICATION SUITE</span>
+            </div>
+          </ScrollReveal>
+
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
             MIGRATION IS NOT COMPLETE <br />
-            <span className="text-[#00E5FF]">UNTIL IT IS VERIFIED.</span>
+            <TextDecrypt
+              text="UNTIL IT IS VERIFIED."
+              as="span"
+              className="text-[#00E5FF]"
+              speed={32}
+              cursorColor="#00E5FF"
+            />
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Deploying a post-quantum cipher is only half the battle. Organizations must rigorously prove that the intended algorithms took effect, certificates chain correctly, applications remain fully functional, and no performance regression occurred.
-          </p>
+
+          <ScrollReveal delay={150} direction="up">
+            <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
+              Deploying a post-quantum cipher is only half the battle. Organizations must rigorously prove that the intended algorithms took effect, certificates chain correctly, applications remain fully functional, and no performance regression occurred.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Validation Steps Pipeline Ribbon */}

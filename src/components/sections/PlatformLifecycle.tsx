@@ -1,45 +1,54 @@
 import React, { useState } from 'react';
+import { Layers, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { PLATFORM_STAGES } from '../../data/mockData';
-import { ChevronRight, CheckCircle2, Layers } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const PlatformLifecycle: React.FC = () => {
   const [selectedStage, setSelectedStage] = useState<number>(0);
   const activeStage = PLATFORM_STAGES[selectedStage];
 
   return (
-    <section id="lifecycle" className="relative bg-[#071522] text-[#EAF4FF] overflow-hidden transition-colors duration-500 border-t border-[#22D3EE]/20">
-      {/* Subtle Visual Continuity Ribbon */}
-      <div className="relative w-full py-4 border-b border-white/5 bg-[#050E17]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-[11px] font-mono-code text-[#94A9BC]">
-          <span className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#22D3EE] animate-pulse" />
-            <span>INTELLIGENCE BLUEPRINT // FULL TRANSFORMATION LIFECYCLE</span>
-          </span>
-          <span className="text-[#22D3EE]">NIST FIPS 203 / 204 / 205 Validated</span>
+    <section id="platform-lifecycle" className="relative bg-[#071522] text-[#EAF4FF] overflow-hidden transition-colors duration-500 border-t border-[#3B82F6]/20">
+      {/* Visual Continuity Transition Strip (Mint -> Technical Navy) */}
+      <div className="relative w-full overflow-hidden bg-gradient-to-b from-[#E8F7F4] via-[#081A2B] to-[#071522] pt-6 pb-8 px-4">
+        <div className="max-w-5xl mx-auto flex items-center justify-center">
+          <div className="tech-divider opacity-30" />
         </div>
       </div>
 
-      <div className="relative py-20 md:py-32 deep-blue-grid">
+      <div className="relative py-16 md:py-24 deep-blue-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Section Header with Deep Technical Blueprint Typography */}
+          {/* Section Header */}
           <div className="max-w-4xl mb-16 sm:mb-20">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3B82F6]/15 border border-[#3B82F6]/30 text-xs font-mono-code text-[#22D3EE] mb-6 shadow-xs">
-              <Layers className="w-3.5 h-3.5" />
-              <span>THE 8-STAGE TRANSFORMATION CYCLE</span>
-            </div>
+            <ScrollReveal delay={50} direction="down">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3B82F6]/15 border border-[#3B82F6]/30 text-xs font-mono-code text-[#22D3EE] mb-6 shadow-xs">
+                <Layers className="w-3.5 h-3.5" />
+                <span>THE 8-STAGE TRANSFORMATION CYCLE</span>
+              </div>
+            </ScrollReveal>
 
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#EAF4FF] tracking-tight leading-[1.05]">
               FROM DISCOVERY <br />
-              <span className="text-[#22D3EE]">TO CRYPTO-AGILITY.</span>
+              <TextDecrypt
+                text="TO CRYPTO-AGILITY."
+                as="span"
+                className="text-[#22D3EE]"
+                speed={32}
+                cursorColor="#22D3EE"
+              />
             </h2>
 
-            <p className="mt-6 text-base sm:text-xl text-[#94A9BC] font-normal leading-relaxed max-w-3xl font-sans">
-              CyberKorp delivers continuous cryptographic lifecycle control. From unearthing hidden ciphers across enterprise repositories to validating post-quantum migration and establishing permanent agility.
-            </p>
+            <ScrollReveal delay={150} direction="up">
+              <p className="mt-6 text-base sm:text-xl text-[#94A9BC] font-normal leading-relaxed max-w-3xl font-sans">
+                CyberKorp delivers continuous cryptographic lifecycle control. From unearthing hidden ciphers across enterprise repositories to validating post-quantum migration and establishing permanent agility.
+              </p>
+            </ScrollReveal>
           </div>
 
           {/* Interactive 8-Stage Engineering Blueprint Navigator */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <ScrollReveal delay={250} direction="up" distance={30}>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Column: 8 Stages List with Deep Blue Engineering Borders */}
             <div className="lg:col-span-5 space-y-2.5">
               {PLATFORM_STAGES.map((stage, idx) => {
@@ -170,6 +179,7 @@ export const PlatformLifecycle: React.FC = () => {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Share2 } from 'lucide-react';
 import { DependencyGraph } from '../visualizers/DependencyGraph';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const DependencySection: React.FC = () => {
   return (
@@ -8,17 +10,29 @@ export const DependencySection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
-            <Share2 className="w-3.5 h-3.5" />
-            <span>SIGNATURE ARCHITECTURAL CAPABILITY</span>
-          </div>
+          <ScrollReveal delay={50} direction="down">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-xs font-mono-code text-[#00E5FF] mb-4">
+              <Share2 className="w-3.5 h-3.5" />
+              <span>SIGNATURE ARCHITECTURAL CAPABILITY</span>
+            </div>
+          </ScrollReveal>
+
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
             CRYPTOGRAPHY IS CONNECTED. <br />
-            <span className="text-[#00E5FF]">SEE THE BLAST RADIUS BEFORE YOU TOUCH IT.</span>
+            <TextDecrypt
+              text="SEE THE BLAST RADIUS BEFORE YOU TOUCH IT."
+              as="span"
+              className="text-[#00E5FF]"
+              speed={30}
+              cursorColor="#00E5FF"
+            />
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Changing one cryptographic component can affect systems far beyond the original finding. CyberKorp correlates individual ciphers and certificates with the applications, databases, and APIs that rely on them.
-          </p>
+
+          <ScrollReveal delay={150} direction="up">
+            <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
+              Changing one cryptographic component can affect systems far beyond the original finding. CyberKorp correlates individual ciphers and certificates with the applications, databases, and APIs that rely on them.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Feature Differentiators */}

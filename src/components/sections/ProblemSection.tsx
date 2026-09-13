@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { TextDecrypt } from '../common/TextDecrypt';
+import { ScrollReveal } from '../common/ScrollReveal';
 
 export const ProblemSection: React.FC = () => {
-  const [illuminated, setIlluminated] = useState(false);
+  const [illuminated, setIlluminated] = useState(true);
 
   const infrastructureElements = [
     { title: 'Core Applications', tech: 'Java / Go / Node.js Microservices', defaultStatus: 'Obscured Calls', illuminatedStatus: '142 Hardcoded Cipher Instances' },
@@ -18,21 +20,32 @@ export const ProblemSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F43F5E]/10 border border-[#F43F5E]/30 text-xs font-mono-code text-[#F43F5E] mb-4">
-            <AlertTriangle className="w-3.5 h-3.5" />
-            <span>THE CRYPTOGRAPHIC BLIND SPOT</span>
-          </div>
+          <ScrollReveal delay={50} direction="down">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F43F5E]/10 border border-[#F43F5E]/30 text-xs font-mono-code text-[#F43F5E] mb-4">
+              <AlertTriangle className="w-3.5 h-3.5" />
+              <span>THE CRYPTOGRAPHIC BLIND SPOT</span>
+            </div>
+          </ScrollReveal>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
             YOU CANNOT MIGRATE <br />
-            <span className="text-[#00E5FF]">WHAT YOU CANNOT SEE.</span>
+            <TextDecrypt
+              text="WHAT YOU CANNOT SEE."
+              as="span"
+              className="text-[#00E5FF]"
+              speed={32}
+              cursorColor="#00E5FF"
+            />
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Modern enterprises depend on cryptography across applications, infrastructure, networks, identities, and data. But most organizations do not have a complete, continuously updated picture of where cryptography exists or what depends on it.
-          </p>
+          <ScrollReveal delay={150} direction="up">
+            <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
+              Modern enterprises depend on cryptography across applications, infrastructure, networks, identities, and data. But most organizations do not have a complete, continuously updated picture of where cryptography exists or what depends on it.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Interactive Blind Spot vs CyberKorp Illuminator Inspector */}
-        <div className="rounded-2xl border border-white/10 bg-[#05070A] p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+        <ScrollReveal delay={250} direction="up" distance={30}>
+          <div className="rounded-2xl border border-white/10 bg-[#05070A] p-6 sm:p-8 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#0066FF]/10 blur-[120px] pointer-events-none" />
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-white/10">
@@ -134,6 +147,7 @@ export const ProblemSection: React.FC = () => {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </div>
     </section>
   );
