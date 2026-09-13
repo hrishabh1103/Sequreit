@@ -54,7 +54,7 @@ export interface IndustryData {
   criticalChallenge: string;
   cryptoFootprint: string[];
   vulnerabilities: string[];
-  sequreitImpact: string;
+  cyberkorpImpact: string;
 }
 
 export interface TeamMember {

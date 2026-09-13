@@ -20,7 +20,7 @@ export const PrioritizationSection: React.FC = () => {
             <span className="text-[#00E5FF]">NEEDS TO MOVE AT ONCE.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            A blanket migration approach causes organizational paralysis. SeQureit translates discovery findings into an actionable, prioritized execution queue—clarifying WHAT to migrate, WHEN to migrate, and WHY it matters.
+            A blanket migration approach causes organizational paralysis. CyberKorp translates discovery findings into an actionable, prioritized execution queue—clarifying WHAT to migrate, WHEN to migrate, and WHY it matters.
           </p>
         </div>
 

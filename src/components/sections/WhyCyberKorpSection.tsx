@@ -1,13 +1,13 @@
 import React from 'react';
 import { Network, ShieldCheck, RefreshCw, Cpu, Layers } from 'lucide-react';
 
-export const WhySeQureitSection: React.FC = () => {
+export const WhyCyberKorpSection: React.FC = () => {
   const pillars = [
     {
       num: '01',
       title: 'VENDOR-NEUTRAL',
       headline: 'Works across heterogeneous estates',
-      desc: 'No lock-in to proprietary hardware or exclusive cloud ecosystems. SeQureit maps and orchestrates cryptography across multi-cloud, on-premises datacenters, legacy mainframes, and air-gapped environments alike.',
+      desc: 'No lock-in to proprietary hardware or exclusive cloud ecosystems. CyberKorp maps and orchestrates cryptography across multi-cloud, on-premises datacenters, legacy mainframes, and air-gapped environments alike.',
       icon: Layers,
       color: '#00E5FF'
     },
@@ -15,7 +15,7 @@ export const WhySeQureitSection: React.FC = () => {
       num: '02',
       title: 'INFRASTRUCTURE-AWARE',
       headline: 'Deep relational dependency mapping',
-      desc: 'Cryptography does not exist in isolation. SeQureit maps how ciphers connect to services, APIs, identity tokens, and databases—preventing migration changes from causing catastrophic service outages.',
+      desc: 'Cryptography does not exist in isolation. CyberKorp maps how ciphers connect to services, APIs, identity tokens, and databases—preventing migration changes from causing catastrophic service outages.',
       icon: Network,
       color: '#0066FF'
     },
@@ -23,7 +23,7 @@ export const WhySeQureitSection: React.FC = () => {
       num: '03',
       title: 'MIGRATION-FOCUSED',
       headline: 'Discovery translated into execution',
-      desc: 'Discovery without prioritization produces alert fatigue. SeQureit evaluates data longevity, HNDL exposure, and dependency depth to deliver an actionable, phased migration work queue.',
+      desc: 'Discovery without prioritization produces alert fatigue. CyberKorp evaluates data longevity, HNDL exposure, and dependency depth to deliver an actionable, phased migration work queue.',
       icon: ShieldCheck,
       color: '#8B5CF6'
     },
@@ -52,7 +52,7 @@ export const WhySeQureitSection: React.FC = () => {
             <span className="text-[#00E5FF]">WE HELP YOU UNDERSTAND IT.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Others build point quantum-safe infrastructure. SeQureit helps enterprises understand, prioritize, and transform the cryptography already embedded across their existing digital estates.
+            Others build point quantum-safe infrastructure. CyberKorp helps enterprises understand, prioritize, and transform the cryptography already embedded across their existing digital estates.
           </p>
           <div className="mt-4 p-4 rounded-xl bg-[#080C12] border border-[#0066FF]/20 text-xs sm:text-sm font-mono-code text-[#00E5FF]">
             &ldquo;PQC migration is our entry point. Crypto-agility is our destination.&rdquo;

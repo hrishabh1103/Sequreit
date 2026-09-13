@@ -10,7 +10,7 @@ export const PqVpnSection: React.FC<{ onRequestDemo: () => void }> = ({ onReques
         <div className="max-w-3xl mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#10B981]/15 border border-[#10B981]/35 text-xs font-mono-code text-[#10B981] mb-4">
             <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
-            <span>ONE OF SEQUREIT&apos;S CURRENT REMEDIATION CAPABILITIES</span>
+            <span>ONE OF CYBERKORP&apos;S CURRENT REMEDIATION CAPABILITIES</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">

@@ -34,7 +34,7 @@ export const PlatformLifecycle: React.FC = () => {
             </h2>
 
             <p className="mt-6 text-base sm:text-xl text-[#94A9BC] font-normal leading-relaxed max-w-3xl font-sans">
-              SeQureit delivers continuous cryptographic lifecycle control. From unearthing hidden ciphers across enterprise repositories to validating post-quantum migration and establishing permanent agility.
+              CyberKorp delivers continuous cryptographic lifecycle control. From unearthing hidden ciphers across enterprise repositories to validating post-quantum migration and establishing permanent agility.
             </p>
           </div>
 

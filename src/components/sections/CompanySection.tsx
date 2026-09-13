@@ -111,7 +111,7 @@ export const CompanySection: React.FC = () => {
 
                   <div className="mt-6 pt-4 border-t border-[#F1F5F9] text-[11px] font-mono-code text-[#94A3B8] flex items-center justify-between">
                     <span>Team Core</span>
-                    <span className="text-[#64748B]">SeQureit</span>
+                    <span className="text-[#64748B]">CyberKorp</span>
                   </div>
                 </div>
               ))}

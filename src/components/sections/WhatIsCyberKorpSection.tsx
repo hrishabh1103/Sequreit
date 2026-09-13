@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layers, ArrowDown, Shield, RefreshCw } from 'lucide-react';
 
-export const WhatIsSeQureitSection: React.FC = () => {
+export const WhatIsCyberKorpSection: React.FC = () => {
   const hiddenSubstrates = [
     { label: 'APPLICATIONS', category: 'Microservices & Core Logic' },
     { label: 'APIS & INGRESS', category: 'REST / GraphQL / gRPC' },
@@ -56,7 +56,7 @@ export const WhatIsSeQureitSection: React.FC = () => {
             <p className="text-base sm:text-xl text-[#475569] font-normal max-w-3xl mx-auto leading-relaxed">
               Cryptography is embedded across applications, APIs, certificates, PKI, keys, KMS, HSMs, networks and devices.
               <span className="block mt-2 text-[#64748B] text-sm sm:text-base">
-                SeQureit maps that hidden layer, connects the dependencies, identifies risk and helps organizations transform it for a quantum-safe future.
+                CyberKorp maps that hidden layer, connects the dependencies, identifies risk and helps organizations transform it for a quantum-safe future.
               </span>
             </p>
           </div>
@@ -100,7 +100,7 @@ export const WhatIsSeQureitSection: React.FC = () => {
               <div className="h-6 w-px bg-gradient-to-b from-[#0066FF] to-[#0EA5A5]/40" />
             </div>
 
-            {/* Level 2: SeQureit Control Plane Nexus */}
+            {/* Level 2: CyberKorp Control Plane Nexus */}
             <div className="relative z-10 p-6 sm:p-8 rounded-2xl bg-[#F0FBF8] border-2 border-[#0EA5A5]/30 shadow-xs relative overflow-hidden">
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-[#D5EFEA]">
                 <div className="flex items-center gap-3">
@@ -112,13 +112,13 @@ export const WhatIsSeQureitSection: React.FC = () => {
                       INTELLIGENCE & CONTROL LAYER
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-[#07111F] font-mono-code">
-                      SEQUREIT CONTROL PLANE
+                      CYBERKORP CONTROL PLANE
                     </h3>
                   </div>
                 </div>
 
                 <div className="max-w-md text-xs sm:text-sm text-[#475569] font-mono-code bg-white p-3.5 rounded-lg border border-[#D5EFEA] shadow-xs">
-                  &ldquo;SeQureit does not ask enterprises to replace their infrastructure. It helps them understand and transform the cryptography already embedded within it.&rdquo;
+                  &ldquo;CyberKorp does not ask enterprises to replace their infrastructure. It helps them understand and transform the cryptography already embedded within it.&rdquo;
                 </div>
               </div>
 

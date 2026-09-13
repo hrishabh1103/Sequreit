@@ -69,7 +69,7 @@ export const TechnologySection: React.FC = () => {
             <span className="text-[#00E5FF]">CRYPTOGRAPHIC INTELLIGENCE.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            SeQureit is architected as an end-to-end intelligence and control pipeline—from multi-surface discovery probes to automated dependency correlation and post-quantum remediation.
+            CyberKorp is architected as an end-to-end intelligence and control pipeline—from multi-surface discovery probes to automated dependency correlation and post-quantum remediation.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export const TechnologySection: React.FC = () => {
             </div>
 
             <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono-code text-slate-500">
-              <span>SeQureit Deep-Tech Pipeline</span>
+              <span>CyberKorp Deep-Tech Pipeline</span>
               <span className="text-slate-400">Layer {architectureLayers[selectedLayer].layer} of 06</span>
             </div>
           </div>

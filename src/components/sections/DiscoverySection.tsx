@@ -40,7 +40,7 @@ export const DiscoverySection: React.FC = () => {
             <span className="text-[#00E5FF]">YOU DIDN&apos;T KNOW YOU HAD.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            SeQureit continuously traverses source code, repositories, configuration manifests, TLS endpoints, and key management infrastructure to extract cryptographic calls and build evidence-backed findings.
+            CyberKorp continuously traverses source code, repositories, configuration manifests, TLS endpoints, and key management infrastructure to extract cryptographic calls and build evidence-backed findings.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export const DiscoverySection: React.FC = () => {
                   <div className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]" />
                   <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]" />
                   <span className="text-xs font-mono-code text-slate-400 ml-2">
-                    sequreit-ast-engine :: {scanTargets[activeScanTarget].name}
+                    cyberkorp-ast-engine :: {scanTargets[activeScanTarget].name}
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-[11px] font-mono-code text-[#00E5FF]">

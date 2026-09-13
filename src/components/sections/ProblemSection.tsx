@@ -31,7 +31,7 @@ export const ProblemSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Interactive Blind Spot vs SeQureit Illuminator Inspector */}
+        {/* Interactive Blind Spot vs CyberKorp Illuminator Inspector */}
         <div className="rounded-2xl border border-white/10 bg-[#05070A] p-6 sm:p-8 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#0066FF]/10 blur-[120px] pointer-events-none" />
 
@@ -41,7 +41,7 @@ export const ProblemSection: React.FC = () => {
                 Interactive Infrastructure Inspector
               </div>
               <div className="text-lg font-bold text-white mt-0.5">
-                {illuminated ? 'SeQureit Cryptographic Intelligence Layer' : 'Standard Enterprise Visibility (The Blind Spot)'}
+                {illuminated ? 'CyberKorp Cryptographic Intelligence Layer' : 'Standard Enterprise Visibility (The Blind Spot)'}
               </div>
             </div>
 
@@ -68,7 +68,7 @@ export const ProblemSection: React.FC = () => {
                 }`}
               >
                 <Eye className="w-3.5 h-3.5 text-[#00E5FF]" />
-                <span>Activate SeQureit Lens</span>
+                <span>Activate CyberKorp Lens</span>
               </button>
             </div>
           </div>

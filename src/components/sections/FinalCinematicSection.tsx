@@ -52,7 +52,7 @@ export const FinalCinematicSection: React.FC<FinalCinematicSectionProps> = ({ on
             </svg>
           </div>
           <span className="text-2xl font-bold tracking-tight text-white font-mono-code">
-            SeQureit
+            CyberKorp
           </span>
           <span className="text-xs uppercase tracking-[0.25em] text-[#00E5FF] font-mono-code mt-0.5">
             Cryptographic Intelligence for a Quantum-Safe World

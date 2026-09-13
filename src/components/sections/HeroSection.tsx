@@ -39,7 +39,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRequestDemo, onExplo
           </p>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed pt-3">
-            SeQureit gives enterprises the intelligence to discover, understand, prioritize, and transform cryptography across their digital infrastructure.
+            CyberKorp gives enterprises the intelligence to discover, understand, prioritize, and transform cryptography across their digital infrastructure.
           </p>
 
           <p className="text-xs sm:text-sm text-slate-400 font-mono-code flex items-center justify-center gap-2 pt-1">

@@ -24,7 +24,7 @@ export const PqVpnSimulator: React.FC<{ onRequestDemo: () => void }> = ({ onRequ
             </h3>
           </div>
           <p className="text-xs text-slate-400 mt-1">
-            Toggle protocol mode to compare classical handshake vulnerability vs SeQureit post-quantum encapsulation.
+            Toggle protocol mode to compare classical handshake vulnerability vs CyberKorp post-quantum encapsulation.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export const PqVpnSimulator: React.FC<{ onRequestDemo: () => void }> = ({ onRequ
             }`}
           >
             <ShieldCheck className="w-3.5 h-3.5 text-black" />
-            <span>SeQureit PQ-VPN (ML-KEM)</span>
+            <span>CyberKorp PQ-VPN (ML-KEM)</span>
           </button>
         </div>
       </div>
@@ -67,7 +67,7 @@ export const PqVpnSimulator: React.FC<{ onRequestDemo: () => void }> = ({ onRequ
             <div className="text-xs font-bold text-white font-mono-code">CLIENT WORKSTATION</div>
             <div className="text-[10px] font-mono-code text-slate-400">IP: 10.240.12.88</div>
             <div className="text-[9px] font-mono-code text-slate-500 pt-1 border-t border-white/5">
-              SeQureit Micro-Agent Active
+              CyberKorp Micro-Agent Active
             </div>
           </div>
 

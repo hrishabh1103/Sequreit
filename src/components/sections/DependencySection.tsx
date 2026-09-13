@@ -17,7 +17,7 @@ export const DependencySection: React.FC = () => {
             <span className="text-[#00E5FF]">SEE THE BLAST RADIUS BEFORE YOU TOUCH IT.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Changing one cryptographic component can affect systems far beyond the original finding. SeQureit correlates individual ciphers and certificates with the applications, databases, and APIs that rely on them.
+            Changing one cryptographic component can affect systems far beyond the original finding. CyberKorp correlates individual ciphers and certificates with the applications, databases, and APIs that rely on them.
           </p>
         </div>
 

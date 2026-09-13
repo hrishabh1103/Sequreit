@@ -17,7 +17,7 @@ export const InventorySection: React.FC = () => {
             <span className="text-[#00E5FF]">INTO ONE INTELLIGIBLE INVENTORY.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            SeQureit continuously aggregates cryptographic findings into a normalized Cryptography Bill of Materials (CBOM). Understand every algorithm, certificate validity window, key length, and implementation owner in one place.
+            CyberKorp continuously aggregates cryptographic findings into a normalized Cryptography Bill of Materials (CBOM). Understand every algorithm, certificate validity window, key length, and implementation owner in one place.
           </p>
         </div>
 

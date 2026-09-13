@@ -56,7 +56,7 @@ export const RemediationSection: React.FC<RemediationSectionProps> = ({ onExplor
       status: 'ROADMAP',
       statusLabel: 'Future Vision',
       statusColor: '#8B5CF6',
-      desc: 'Standardized ETSI QKD 004/014 connectors linking physical quantum key distribution devices into SeQureit hybrid network control planes.'
+      desc: 'Standardized ETSI QKD 004/014 connectors linking physical quantum key distribution devices into CyberKorp hybrid network control planes.'
     }
   ];
 
@@ -74,7 +74,7 @@ export const RemediationSection: React.FC<RemediationSectionProps> = ({ onExplor
             <span className="text-[#00E5FF]">TO CONTROLLED ACTION.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            SeQureit translates discovery insights into concrete remediation pathways. Rather than forcing wholesale rip-and-replace, we provide modular technologies and guided transformation patterns.
+            CyberKorp translates discovery insights into concrete remediation pathways. Rather than forcing wholesale rip-and-replace, we provide modular technologies and guided transformation patterns.
           </p>
         </div>
 

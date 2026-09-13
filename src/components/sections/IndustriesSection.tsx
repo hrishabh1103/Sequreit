@@ -30,7 +30,7 @@ export const IndustriesSection: React.FC = () => {
             </h2>
 
             <p className="mt-5 text-base sm:text-xl text-[#475569] font-normal leading-relaxed max-w-3xl">
-              Digital backbone infrastructure cannot afford sudden outages, broken certificate trust chains, or retroactive data decryption. SeQureit aligns cryptographic transformation with enterprise operational realities.
+              Digital backbone infrastructure cannot afford sudden outages, broken certificate trust chains, or retroactive data decryption. CyberKorp aligns cryptographic transformation with enterprise operational realities.
             </p>
           </div>
 
@@ -135,14 +135,14 @@ export const IndustriesSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* SeQureit Impact Strip */}
+              {/* CyberKorp Impact Strip */}
               <div className="pt-6 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
                   <div className="text-[10px] font-mono-code uppercase tracking-wider text-[#64748B] font-semibold">
-                    SeQureit Platform Impact:
+                    CyberKorp Platform Impact:
                   </div>
                   <p className="text-xs sm:text-sm font-mono-code text-[#07111F] font-semibold mt-1 max-w-xl">
-                    {selectedIndustry.sequreitImpact}
+                    {selectedIndustry.cyberkorpImpact}
                   </p>
                 </div>
                 <div className="text-xs font-mono-code text-[#0066FF] flex items-center gap-1 font-semibold shrink-0">

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { HeroSection } from './components/sections/HeroSection';
 import { MarqueeStrip } from './components/layout/MarqueeStrip';
-import { WhatIsSeQureitSection } from './components/sections/WhatIsSeQureitSection';
+import { WhatIsCyberKorpSection } from './components/sections/WhatIsCyberKorpSection';
 import { ProblemSection } from './components/sections/ProblemSection';
 import { WhyNowSection } from './components/sections/WhyNowSection';
 import { DiscoverySection } from './components/sections/DiscoverySection';
@@ -72,9 +72,9 @@ export default function App() {
         <MarqueeStrip />
 
         {/* ================================================================ */}
-        {/* SECTION 02: LIGHT — WHAT IS SEQUREIT? (THE CONTROL PLANE)       */}
+        {/* SECTION 02: LIGHT — WHAT IS CYBERKORP? (THE CONTROL PLANE)      */}
         {/* ================================================================ */}
-        <WhatIsSeQureitSection />
+        <WhatIsCyberKorpSection />
 
         {/* ================================================================ */}
         {/* SECTION 03: DARK — YOU CANNOT MIGRATE WHAT YOU CANNOT SEE       */}

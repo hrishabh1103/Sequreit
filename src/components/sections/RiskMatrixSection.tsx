@@ -43,7 +43,7 @@ export const RiskMatrixSection: React.FC = () => {
             <span className="text-[#00E5FF]">IS EQUALLY IMPORTANT.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            A deprecated cipher on an ephemeral internal metrics cache does not carry the same risk as an RSA key protecting 20-year sovereign secrets. SeQureit correlates algorithm vulnerability, exposure surface, and data lifetime to prioritize what matters.
+            A deprecated cipher on an ephemeral internal metrics cache does not carry the same risk as an RSA key protecting 20-year sovereign secrets. CyberKorp correlates algorithm vulnerability, exposure surface, and data lifetime to prioritize what matters.
           </p>
           <div className="mt-4 text-xs font-mono-code text-slate-400 flex items-center gap-2">
             <Info className="w-4 h-4 text-[#00E5FF] shrink-0" />

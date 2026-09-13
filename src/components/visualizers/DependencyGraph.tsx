@@ -400,7 +400,7 @@ export const DependencyGraph: React.FC = () => {
                 {migrationPhase === 'MIGRATION PLAN' &&
                   'Targeting dual-signature hybrid shim (ML-KEM-768 / ML-DSA-65) with backward compatibility.'}
                 {migrationPhase === 'REMEDIATION' &&
-                  'Executing phased rollout via SeQureit Agility Proxy to avoid client service disruption.'}
+                  'Executing phased rollout via CyberKorp Agility Proxy to avoid client service disruption.'}
                 {migrationPhase === 'VALIDATION' &&
                   'Zero-regression validation gate ensures all downstream APIs negotiate without error.'}
               </div>

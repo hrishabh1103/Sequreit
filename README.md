@@ -1,14 +1,14 @@
-# SeQureit — Cryptographic Intelligence for a Quantum-Safe World
+# CyberKorp — Cryptographic Intelligence for a Quantum-Safe World
 
 > *"You cannot migrate what you cannot see."*
 
-SeQureit is a deep-tech cybersecurity platform delivering cryptographic intelligence and crypto-agility to critical enterprises across BFSI, Defence & Aerospace, Telecom, Energy, and Government.
+CyberKorp is a deep-tech cybersecurity platform delivering cryptographic intelligence and crypto-agility to critical enterprises across BFSI, Defence & Aerospace, Telecom, Energy, and Government.
 
 ---
 
 ## 🚀 Overview
 
-SeQureit provides an end-to-end cryptographic control layer that guides enterprises across the full transition lifecycle:
+CyberKorp provides an end-to-end cryptographic control layer that guides enterprises across the full transition lifecycle:
 
 $$\text{Discover} \longrightarrow \text{Inventory} \longrightarrow \text{Understand} \longrightarrow \text{Assess} \longrightarrow \text{Prioritize} \longrightarrow \text{Remediate} \longrightarrow \text{Validate} \longrightarrow \text{Continuously Manage}$$
 
@@ -61,4 +61,4 @@ npm run preview
 
 ## 🛡️ License
 
-Enterprise Proprietary — © 2026 SeQureit Inc. All rights reserved.
+Enterprise Proprietary — © 2026 CyberKorp Inc. All rights reserved.

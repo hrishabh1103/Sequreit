@@ -587,7 +587,7 @@ export const InteractiveCBOM: React.FC = () => {
             {/* Modal Footer */}
             <div className="p-4 sm:p-5 border-t border-white/10 bg-[#05070A] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono-code">
               <div className="text-slate-500 text-[11px]">
-                SeQureit CBOM Spec v2.4 • Continuous Discovery Pipeline
+                CyberKorp CBOM Spec v2.4 • Continuous Discovery Pipeline
               </div>
               <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
                 <button

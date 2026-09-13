@@ -49,13 +49,13 @@ export const DemoModal: React.FC<DemoModalProps> = ({
 
     // 1. Build Slack Block Kit Notification Payload
     const slackPayload = {
-      text: `🛡️ New SeQureit Demo Request from ${formData.name} (${formData.company})`,
+      text: `🛡️ New CyberKorp Demo Request from ${formData.name} (${formData.company})`,
       blocks: [
         {
           type: 'header',
           text: {
             type: 'plain_text',
-            text: '🛡️ New SeQureit Technical Briefing Request',
+            text: '🛡️ New CyberKorp Technical Briefing Request',
             emoji: true
           }
         },
@@ -116,7 +116,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({
           elements: [
             {
               type: 'mrkdwn',
-              text: '⚡ _Dispatched securely from SeQureit Platform Portal_'
+              text: '⚡ _Dispatched securely from CyberKorp Platform Portal_'
             }
           ]
         }
@@ -126,7 +126,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({
     // 2. Local backup in browser storage so no lead is ever lost
     try {
       const existingLeads = JSON.parse(
-        localStorage.getItem('sequreit_demo_leads') || '[]'
+        localStorage.getItem('cyberkorp_demo_leads') || '[]'
       );
       existingLeads.unshift({
         ...formData,
@@ -134,7 +134,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({
         submittedAt: submissionTime
       });
       localStorage.setItem(
-        'sequreit_demo_leads',
+        'cyberkorp_demo_leads',
         JSON.stringify(existingLeads.slice(0, 100))
       );
     } catch {
@@ -212,7 +212,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({
 
             <h3 className="text-xl sm:text-2xl font-bold text-white font-mono-code mb-2">
               {mode === 'DEMO'
-                ? 'Request a SeQureit Demonstration'
+                ? 'Request a CyberKorp Demonstration'
                 : 'Assess Your Infrastructure Readiness'}
             </h3>
             <p className="text-xs sm:text-sm text-slate-400 mb-6">
@@ -352,7 +352,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({
               </button>
 
               <div className="text-[10px] text-slate-500 text-center">
-                Enterprise confidentiality guaranteed. Instant notification routed to SeQureit security operations.
+                Enterprise confidentiality guaranteed. Instant notification routed to CyberKorp security operations.
               </div>
             </form>
           </div>
@@ -365,7 +365,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({
               Technical Request Acknowledged
             </h4>
             <p className="text-xs text-slate-300 max-w-sm mx-auto leading-relaxed">
-              Thank you, <span className="text-[#00E5FF] font-semibold">{formData.name}</span>. The SeQureit engineering team has received your briefing request for <span className="text-white">{formData.company}</span> and will reach out within 24 hours to coordinate an architecture session.
+              Thank you, <span className="text-[#00E5FF] font-semibold">{formData.name}</span>. The CyberKorp engineering team has received your briefing request for <span className="text-white">{formData.company}</span> and will reach out within 24 hours to coordinate an architecture session.
             </p>
             <div className="p-3 rounded-lg bg-[#05070A] border border-white/10 max-w-xs mx-auto text-[11px] text-slate-400">
               ✓ Notification delivered to Operations Slack channel

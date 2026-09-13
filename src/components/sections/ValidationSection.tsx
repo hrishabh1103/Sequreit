@@ -47,7 +47,7 @@ export const ValidationSection: React.FC = () => {
         { name: 'Automated policy compliance attestation', passed: true },
         { name: 'Baseline reconciliation confirmed clean', passed: true }
       ],
-      telemetry: 'Proof artifact SHA-256: d49b... signed by SeQureit Evidence Validator.'
+      telemetry: 'Proof artifact SHA-256: d49b... signed by CyberKorp Evidence Validator.'
     }
   ];
 

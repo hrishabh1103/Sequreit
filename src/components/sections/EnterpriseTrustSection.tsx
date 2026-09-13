@@ -49,7 +49,7 @@ export const EnterpriseTrustSection: React.FC = () => {
             <span className="text-[#00E5FF]">AND SOVEREIGN TRUST.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            SeQureit is engineered for deployment in high-security environments. Our architecture respects data sovereignty, enforces strict data minimization, and is designed for controlled enterprise environments.
+            CyberKorp is engineered for deployment in high-security environments. Our architecture respects data sovereignty, enforces strict data minimization, and is designed for controlled enterprise environments.
           </p>
         </div>
 

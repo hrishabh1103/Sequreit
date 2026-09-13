@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
                 </svg>
               </div>
               <span className="text-xl font-bold tracking-tight text-white">
-                SeQureit
+                CyberKorp
               </span>
             </div>
 
@@ -90,11 +90,11 @@ export const Footer: React.FC = () => {
         {/* Bottom Disclaimer & Legal */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            &copy; {new Date().getFullYear()} SeQureit. Built in India. Designed for a Global Cryptographic Transition.
+            &copy; {new Date().getFullYear()} CyberKorp. Built in India. Designed for a Global Cryptographic Transition.
           </div>
 
           <div className="text-center md:text-right max-w-lg text-[10px]">
-            Notice: SeQureit builds cryptographic intelligence, risk mapping, and crypto-agility tooling. Telemetry in demonstrations is illustrative.
+            Notice: CyberKorp builds cryptographic intelligence, risk mapping, and crypto-agility tooling. Telemetry in demonstrations is illustrative.
           </div>
 
           <button

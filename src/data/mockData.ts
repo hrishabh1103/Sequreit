@@ -229,9 +229,9 @@ export const MOCK_CBOM_ASSETS: CryptoAsset[] = [
     name: 'telemetry-pqc-pilot-tunnel',
     type: 'Protocol',
     algorithm: 'ML-KEM-768 + X25519',
-    protocol: 'SeQureit PQ-VPN Hybrid',
+    protocol: 'CyberKorp PQ-VPN Hybrid',
     location: 'edge-gateway-eu01 <-> hq-datacenter',
-    owner: 'SeQureit Testbed Team',
+    owner: 'CyberKorp Testbed Team',
     environment: 'Staging',
     evidence: 'Post-Quantum Key Encapsulation (FIPS 203) with classical hybrid fallback',
     risk: 'OPTIMAL',
@@ -351,7 +351,7 @@ export const PRIORITY_QUEUE_ITEMS: PriorityItem[] = [
     hndlRelevance: 'Critical (High Retention)',
     dependencyCount: 19,
     migrationComplexity: 'High',
-    recommendedAction: 'Deploy SeQureit PQ-VPN tunnel with post-quantum key encapsulation',
+    recommendedAction: 'Deploy CyberKorp PQ-VPN tunnel with post-quantum key encapsulation',
     risk: 'CRITICAL'
   },
   {
@@ -391,7 +391,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     criticalChallenge: 'Financial records must remain confidential for 10-30 years, creating acute vulnerability to Harvest Now, Decrypt Later (HNDL) adversaries.',
     cryptoFootprint: ['SWIFT Messaging TLS', 'HSM Cluster Pinning', 'EMV Key Derivation', 'B2B Interbank VPNs', 'Card Vault AES Keys'],
     vulnerabilities: ['Classical RSA in core payment gateways', 'Tightly coupled legacy mainframe cryptography', 'Multi-party certificate dependencies'],
-    sequreitImpact: 'Enables discovery of legacy ciphers across transaction paths and phased rollout of quantum-safe encapsulation without mainframe downtime.'
+    cyberkorpImpact: 'Enables discovery of legacy ciphers across transaction paths and phased rollout of quantum-safe encapsulation without mainframe downtime.'
   },
   {
     id: 'defence',
@@ -401,7 +401,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     criticalChallenge: 'Tactical intelligence and sovereign secrets retain operational value for 30 to 50+ years, demanding immediate post-quantum resilience.',
     cryptoFootprint: ['Tactical IPsec Tunnels', 'Air-Gapped PKI Roots', 'Telemetry Datalinks', 'Mission Firmware Signatures'],
     vulnerabilities: ['Long-lifecycle hardware in disconnected environments', 'Static pre-shared symmetric keys', 'Complex supply-chain firmware crypto'],
-    sequreitImpact: 'Provides air-gapped cryptographic discovery and ready-to-deploy PQ-VPN tunnels for post-quantum secure transport.'
+    cyberkorpImpact: 'Provides air-gapped cryptographic discovery and ready-to-deploy PQ-VPN tunnels for post-quantum secure transport.'
   },
   {
     id: 'oil-gas',
@@ -411,7 +411,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     criticalChallenge: 'Industrial automation equipment operating in harsh environments has a 15-25 year operational lifespan with limited compute overhead.',
     cryptoFootprint: ['Modbus/DNP3 Secure Envelopes', 'Remote Wellhead Radios', 'Pipeline Control VPNs', 'Refinery Safety Systems'],
     vulnerabilities: ['Hardcoded legacy certificates', 'Unsupported proprietary cipher implementations', 'Lack of remote crypto-agility updating'],
-    sequreitImpact: 'Maps OT/IT boundary cryptography and models blast radius before changing critical field device trust anchors.'
+    cyberkorpImpact: 'Maps OT/IT boundary cryptography and models blast radius before changing critical field device trust anchors.'
   },
   {
     id: 'energy',
@@ -421,7 +421,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     criticalChallenge: 'High-availability electrical grid substations cannot tolerate false positives, latency spikes, or interrupted telemetry during cryptographic change.',
     cryptoFootprint: ['IEC 61850 Substation Certs', 'Grid SCADA Backhaul', 'Smart Meter Mesh Keys', 'Synchrophasor TLS Streams'],
     vulnerabilities: ['Substation protocol crypto legacy', 'Massive scale key rotation hurdles', 'Regulatory compliance transition timelines'],
-    sequreitImpact: 'Continuous cryptographic drift monitoring that alerts engineering teams before certificate expiry or cryptographic obsolescence disrupts operations.'
+    cyberkorpImpact: 'Continuous cryptographic drift monitoring that alerts engineering teams before certificate expiry or cryptographic obsolescence disrupts operations.'
   },
   {
     id: 'telecom',
@@ -431,7 +431,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     criticalChallenge: 'Massive throughput (terabits/sec) requires quantum-resistant key exchanges that introduce minimal latency to carrier-grade networks.',
     cryptoFootprint: ['5G Core Service-Based Architecture (SBA) TLS', 'SEPP Roaming Security', 'IPsec Backhaul Tunnels', 'eSIM Profile Decryption'],
     vulnerabilities: ['Massive distributed edge footprint', 'Signaling protocol legacy (Diameter/SS7)', 'High-volume TLS certificate overhead'],
-    sequreitImpact: 'Discovers vulnerable ciphers across 5G microservices and provides high-speed hybrid tunnel integration paths.'
+    cyberkorpImpact: 'Discovers vulnerable ciphers across 5G microservices and provides high-speed hybrid tunnel integration paths.'
   },
   {
     id: 'government',
@@ -441,7 +441,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     criticalChallenge: 'Government environments require controlled cryptographic inventories, long-lived data protection and carefully managed migration paths.',
     cryptoFootprint: ['National ID Signing Keys', 'Government PKI (GPKI)', 'Inter-Agency Data Exchanges', 'Critical National Registries'],
     vulnerabilities: ['Fragmented cross-departmental trust models', 'Decades-old legacy software stacks', 'Lack of a central cryptographic inventory'],
-    sequreitImpact: 'Establishes a sovereign, comprehensive CBOM across civil infrastructure to guide structured national transition plans.'
+    cyberkorpImpact: 'Establishes a sovereign, comprehensive CBOM across civil infrastructure to guide structured national transition plans.'
   },
   {
     id: 'healthcare',
@@ -451,7 +451,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     criticalChallenge: 'Genomic information is immutable and tied to human life expectancy (80+ years), making HNDL an existential patient privacy threat.',
     cryptoFootprint: ['HL7 / FHIR API Endpoints', 'PACS Imaging DICOM TLS', 'IoMT Connected Infusion Pumps', 'Genomic Data Repositories'],
     vulnerabilities: ['Legacy embedded medical device firmware', 'Static vendor root certificates', 'Unencrypted internal hospital VLANs'],
-    sequreitImpact: 'Identifies high-retention genomic and clinical data repositories to prioritize immediate post-quantum storage and transit remediation.'
+    cyberkorpImpact: 'Identifies high-retention genomic and clinical data repositories to prioritize immediate post-quantum storage and transit remediation.'
   },
   {
     id: 'manufacturing',
@@ -461,7 +461,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     criticalChallenge: 'Intellectual property theft of manufacturing blueprints threatens multi-billion dollar industrial advantages decades into the future.',
     cryptoFootprint: ['Industrial IoT (IIoT) Gateways', 'Supply Chain ERP EDI', 'CAD/CAM Vault Encryption', 'Cobot Controller Auth'],
     vulnerabilities: ['Unpatched legacy operating systems on factory floors', 'Shared symmetric keys across vendor fleets'],
-    sequreitImpact: 'Isolates and validates factory floor cryptographic endpoints without halting active assembly lines.'
+    cyberkorpImpact: 'Isolates and validates factory floor cryptographic endpoints without halting active assembly lines.'
   },
   {
     id: 'technology',
@@ -471,7 +471,7 @@ export const INDUSTRIES_DATA: IndustryData[] = [
     criticalChallenge: 'Rapid release cadences risk introducing unvetted cryptographic libraries, hardcoded credentials, and obsolete ciphers in microservices.',
     cryptoFootprint: ['mTLS Service Mesh', 'JWT Signing Infrastructure', 'Customer Data-at-Rest KMS', 'OAuth2 / OIDC Providers'],
     vulnerabilities: ['Dependency tree crypto vulnerabilities in npm/PyPI/cargo', 'Shadow cloud certificates', 'Configuration drift across K8s clusters'],
-    sequreitImpact: 'Automates CI/CD cryptographic discovery and establishes policy gates before vulnerable algorithms deploy into production.'
+    cyberkorpImpact: 'Automates CI/CD cryptographic discovery and establishes policy gates before vulnerable algorithms deploy into production.'
   }
 ];
 
@@ -486,13 +486,13 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Hrishabh Gupta',
     role: 'Technology & Product',
     focus: 'Discovery Engine, Dependency Intelligence & Crypto-Agility',
-    bio: "Building SeQureit's cryptographic discovery, dependency intelligence and crypto-agility platform."
+    bio: "Building CyberKorp's cryptographic discovery, dependency intelligence and crypto-agility platform."
   },
   {
     name: 'Abhishek Pratap Singh',
     role: 'DevOps Engineer',
     focus: 'Infrastructure, Deployment & Platform Operations',
-    bio: "Engineering infrastructure, deployment and platform operations for SeQureit's cryptographic systems."
+    bio: "Engineering infrastructure, deployment and platform operations for CyberKorp's cryptographic systems."
   },
   {
     name: 'Raunak Sharma',

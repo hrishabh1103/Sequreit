@@ -73,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onRequestDemo }) => {
               </svg>
             </div>
             <span className="text-base font-bold tracking-tight text-white font-mono-code flex items-center gap-1.5 whitespace-nowrap">
-              SeQureit
+              CyberKorp
               <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] animate-pulse" />
             </span>
           </a>

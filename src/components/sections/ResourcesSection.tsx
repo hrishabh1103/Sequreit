@@ -51,7 +51,7 @@ export const ResourcesSection: React.FC = () => {
       readTime: '7 min read',
       summary: 'How to convert raw asset inventories into phased work queues prioritized by Harvest Now, Decrypt Later (HNDL) data retention horizons.',
       type: 'Executive Brief',
-      detailedOverview: 'A Cryptography Bill of Materials (CBOM) is the cryptographic equivalent of an SBOM. It creates an immutable, machine-readable inventory of all algorithms, keys, certificates, and protocols in use. This brief outlines how SeQureit enriches the CBOM with business criticality scores and data retention horizons, converting thousands of raw assets into a focused priority queue based on HNDL exposure.',
+      detailedOverview: 'A Cryptography Bill of Materials (CBOM) is the cryptographic equivalent of an SBOM. It creates an immutable, machine-readable inventory of all algorithms, keys, certificates, and protocols in use. This brief outlines how CyberKorp enriches the CBOM with business criticality scores and data retention horizons, converting thousands of raw assets into a focused priority queue based on HNDL exposure.',
       takeaways: [
         'Standardizes cryptographic telemetry across heterogeneous environments into canonical, auditable records.',
         'Enriches asset records with data retention horizons to isolate records subject to multi-decade regulatory retention.',
@@ -109,7 +109,7 @@ export const ResourcesSection: React.FC = () => {
             <span className="text-[#00E5FF]">FOR CRYPTOGRAPHIC LEADERS.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Practical technical analysis, architecture frameworks, and migration methodology authored by the SeQureit research and engineering team. Click any paper to read the architectural overview.
+            Practical technical analysis, architecture frameworks, and migration methodology authored by the CyberKorp research and engineering team. Click any paper to read the architectural overview.
           </p>
         </div>
 
@@ -163,7 +163,7 @@ export const ResourcesSection: React.FC = () => {
               </div>
 
               <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono-code">
-                <span className="text-slate-500">SeQureit Research</span>
+                <span className="text-slate-500">CyberKorp Research</span>
                 <button
                   type="button"
                   onClick={(e) => {
